@@ -47,13 +47,13 @@
     }
 }
 
-/* testing */
+/* scrip testing grid disini testing */
 
 #grid1{
     display: grid;
     grid-template-columns: 1fr 20%  15% ;
     grid-template-rows:60px 1fr 60px;
-    grid-template-areas: "header header header" "article nav ads" "footer footer footer";
+    grid-template-areas: "article  header header" "article nav ads" "article  footer footer";
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     height: 100vh;
@@ -103,7 +103,37 @@
                              "nav nav ads"
                              "nav nav ads"
                              "footer footer footer";
-        grid-template-rows: 80px 300px 70px;
+        grid-template-rows: 80px auto 70px;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.isi-article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    margin: 0px;
+}
+
+.konten-isi{
+    border: 1px solid red;
+    height: 200px;;
+}
+
+@media all and (max-width: 575px){
+    .isi-article{
+        grid-template-areas: "konten-isi";
+        grid-template-rows: auto ;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 584px) and (max-width: 1024px){
+    .isi-article{
+        grid-template-areas: "konten-isi";
+        grid-template-rows: auto ;
+        grid-template-columns: 1fr;
     }
 }
