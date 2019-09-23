@@ -1,34 +1,109 @@
-body{
+#grid{
     display: grid;
     grid-template-columns: 1fr 20%  15% ;
     grid-template-rows:60px 1fr 60px;
     grid-template-areas: "header header header" "article nav ads" "footer footer footer";
-    grid-gap: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
     height: 100vh;
     margin: 0;
 }
 
-header, footer, article, nav, div{
+.pageHeader, .mainArticle, .mainNav, .siteAds, .pageFooter{
     padding: 20px;
     background: gold;
 }
-#pageHeader{
+.pageHeader{
     grid-area: header;
 }
 
-#mainArticle{
+.mainArticle{
     grid-area: article;
 }
 
-#mainNav{
+.mainNav{
     grid-area: nav;
 }
 
-#siteAds{
+.siteAds{
     grid-area: ads;
 }
 
-#pageFooter{
+.pageFooter{
     grid-area: footer;
 }
 
+/* media query */
+
+@media all and (max-width: 575px){
+    #grid{
+        grid-template-areas: "header"
+                             "article"
+                             "ads"
+                             "nav"
+                             "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* testing */
+
+#grid1{
+    display: grid;
+    grid-template-columns: 1fr 20%  15% ;
+    grid-template-rows:60px 1fr 60px;
+    grid-template-areas: "header header header" "article nav ads" "footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+
+.pageHeader1, .mainArticle1, .mainNav1, .siteAds1, .pageFooter1{
+    padding: 20px;
+    background: green;
+}
+.pageHeader1{
+    grid-area: header;
+}
+
+.mainArticle1{
+    grid-area: article;
+}
+
+.mainNav1{
+    grid-area: nav;
+}
+
+.siteAds1{
+    grid-area: ads;
+}
+
+.pageFooter1{
+    grid-area: footer;
+}
+
+@media all and (max-width: 575px){
+    #grid1{
+        grid-template-areas: "header"
+                             "article"
+                             "ads"
+                             "nav"
+                             "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 584px) and (max-width: 1024px){
+    #grid1{
+        grid-template-areas: "header header header"
+                             "article nav ads"
+                             "nav nav ads"
+                             "nav nav ads"
+                             "footer footer footer";
+        grid-template-rows: 80px 300px 70px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
