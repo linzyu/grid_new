@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="test.css"> -->
 </head>
 
 <body>
@@ -21,11 +23,8 @@
     <div id="grid1">
             <header class="pageHeader1">header</header>
             <article class="mainArticle1">
-               <div class="isi-article">
-                   <div class="konten-isi">1</div>
-                   <div class="konten-isi">2</div>
-                   <div class="konten-isi">3</div>
-                   <div class="konten-isi">4</div>
+               <div class="isi-article" id="Isi-artikel">
+                    <div class="konten-isi-2">2</div>
                </div>            
             </article>
             <nav class="mainNav1">
@@ -33,6 +32,19 @@
             </nav>
             <div class="siteAds1">Ads</div>
             <footer class="pageFooter1">Footer</footer>
+
     </div>
+
+    
 </body>
 </html>
+
+<script>
+    var kul = document.getElementById("Isi-artikel");
+    for(i  = 0; i<12;i++){
+        kul.innerHTML+= "<div class='konten-isi'></div>";
+    }
+</script>
+
+
+
